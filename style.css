@@ -5,55 +5,64 @@
     --text: #2d3748;
     --light: #f7fafc;
     --white: #ffffff;
+    --shadow: 0 4px 6px rgba(0,0,0,0.07);
 }
 
 * { margin: 0; padding: 0; box-sizing: border-box; }
 html { scroll-behavior: smooth; }
-body { font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; color: var(--text); line-height: 1.6; }
-.container { width: 85%; max-width: 1100px; margin: 0 auto; }
+body { font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; color: var(--text); line-height: 1.6; background-color: var(--white); }
+.container { width: 90%; max-width: 1200px; margin: 0 auto; }
+
+/* Общие стили карточек */
+.card { background: var(--white); border-radius: 12px; box-shadow: var(--shadow); border: 1px solid #e2e8f0; }
 
 /* Шапка */
-.top-bar { background: var(--primary); color: var(--white); padding: 10px 0; font-size: 0.85rem; }
-.top-bar .container { display: flex; justify-content: space-between; }
+.top-bar { background: var(--primary); color: var(--white); padding: 10px 0; font-size: 0.8rem; opacity: 0.9; }
+.top-bar .container { display: flex; justify-content: space-between; flex-wrap: wrap; gap: 5px; }
 
-nav { background: var(--white); padding: 20px 0; box-shadow: 0 2px 5px rgba(0,0,0,0.1); position: sticky; top: 0; z-index: 1000; }
+nav { background: var(--white); padding: 15px 0; box-shadow: 0 2px 10px rgba(0,0,0,0.05); position: sticky; top: 0; z-index: 1000; }
 .nav-container { display: flex; justify-content: space-between; align-items: center; }
-.logo { font-size: 1.8rem; font-weight: bold; color: var(--primary); }
+.logo { font-size: 1.8rem; font-weight: bold; color: var(--primary); letter-spacing: -1px; }
 .logo span { color: var(--accent); }
 .menu { display: flex; list-style: none; gap: 25px; }
-.menu a { text-decoration: none; color: var(--text); font-weight: 500; transition: 0.3s; }
+.menu a { text-decoration: none; color: var(--text); font-weight: 500; transition: 0.3s; font-size: 0.95rem; }
 .menu a:hover { color: var(--accent); }
 
-/* Герой-блок */
+/* Герой-блок (Главный экран) */
 .hero { 
-    height: 60vh; 
-    background: linear-gradient(rgba(26, 54, 93, 0.8), rgba(26, 54, 93, 0.8)), 
-                url('https://images.unsplash.com/photo-1503676260728-1c00da094a0b?auto=format&fit=crop&w=1200&q=80');
-    background-size: cover; background-position: center;
-    display: flex; align-items: center; color: var(--white);
+    min-height: 80vh; 
+    background: linear-gradient(rgba(26, 54, 93, 0.85), rgba(26, 54, 93, 0.95)), 
+                url('https://images.unsplash.com/photo-1523050335392-9bc56759728b?auto=format&fit=crop&w=1400&q=80');
+    background-size: cover; background-position: center; background-attachment: fixed;
+    display: flex; align-items: center; color: var(--white); padding: 60px 0;
 }
-.hero-content h1 { font-size: 3rem; margin-bottom: 20px; }
-.btn { display: inline-block; padding: 12px 30px; background: var(--accent); color: white; text-decoration: none; border-radius: 5px; margin-top: 20px; }
+.hero-container { display: flex; justify-content: space-between; align-items: center; gap: 40px; flex-wrap: wrap; }
+.hero-text { flex: 1; min-width: 300px; }
+.hero-text h1 { font-size: 3.2rem; margin-bottom: 20px; line-height: 1.1; font-weight: 800; }
+.hero-text p { font-size: 1.2rem; margin-bottom: 30px; opacity: 0.9; max-width: 500px; }
+.btn { display: inline-block; padding: 12px 30px; background: var(--accent); color: white; text-decoration: none; border-radius: 6px; font-weight: 600; transition: 0.3s; }
+.btn:hover { background: #2b6cb0; transform: translateY(-2px); }
+
+/* Таблица звонков на Главном */
+.hero-schedule { flex: 0 0 380px; padding: 30px; background: rgba(255,255,255,0.1); backdrop-filter: blur(10px); border: 1px solid rgba(255,255,255,0.2); color: var(--white); box-shadow: none; }
+.hero-schedule h3 { text-align: center; margin-bottom: 20px; font-size: 1.4rem; }
+.bells-table { width: 100%; border-collapse: collapse; font-size: 0.9rem; }
+.bells-table th, .bells-table td { padding: 12px; border-bottom: 1px solid rgba(255,255,255,0.15); text-align: left; }
+.bells-table th { color: var(--accent); text-transform: uppercase; font-size: 0.75rem; letter-spacing: 1px; }
+.bells-table tr:last-child td { border-bottom: none; }
 
 /* Секции */
-.section { padding: 80px 0; }
+.section { padding: 100px 0; }
 .bg-light { background: var(--light); }
-.title { text-align: center; margin-bottom: 50px; font-size: 2rem; }
+.title { text-align: center; margin-bottom: 60px; font-size: 2.4rem; font-weight: 800; color: var(--primary); }
+.title::after { content: ''; display: block; width: 50px; height: 4px; background: var(--accent); margin: 15px auto 0; border-radius: 2px; }
 .grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 30px; }
 
 /* Карточки новостей */
-.card { background: white; padding: 30px; border-radius: 8px; border-bottom: 4px solid var(--accent); box-shadow: 0 4px 6px rgba(0,0,0,0.05); }
-.card-date { color: var(--accent); font-size: 0.9rem; margin-bottom: 10px; font-weight: bold; }
+.news-card { padding: 30px; transition: 0.3s; border-bottom: 4px solid transparent; }
+.news-card:hover { transform: translateY(-5px); border-color: var(--accent); }
+.card-date { color: var(--accent); font-size: 0.85rem; margin-bottom: 12px; font-weight: bold; text-transform: uppercase; }
+.news-card h3 { font-size: 1.25rem; margin-bottom: 10px; color: var(--primary); }
+.news-card p { font-size: 0.95rem; color: #4a5563; }
 
-/* Учителя */
-.teachers-list { display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 20px; }
-.teacher-card { display: flex; background: white; padding: 20px; border-radius: 10px; align-items: center; gap: 20px; }
-.t-img { font-size: 3rem; background: var(--light); padding: 10px; border-radius: 50%; }
-.badge { display: inline-block; background: #ebf8ff; color: #2c5282; padding: 2px 10px; border-radius: 15px; font-size: 0.8rem; font-weight: bold; margin: 5px 0; }
-
-/* Таблица */
-.schedule-table { width: 100%; border-collapse: collapse; background: white; }
-.schedule-table th, .schedule-table td { padding: 15px; border: 1px solid #edf2f7; text-align: left; }
-.schedule-table th { background: var(--primary); color: white; }
-
-footer { background: var(--primary); color: white; padding: 30px 0; text-align: center; font-size: 0.9rem; }
+/*
