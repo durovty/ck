@@ -3,79 +3,100 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Средняя школа №15 | Официальный сайт</title>
+    <title>МБОУ СОШ №15 | Официальный сайт</title>
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
 
     <div class="top-bar">
-        <span>📍 ул. Школьная, 10</span>
-        <span>📞 +7 (800) 555-35-35</span>
+        <div class="container">
+            <span>📍 ул. Школьная, д. 15</span>
+            <span>📞 +7 (495) 123-45-67</span>
+            <span>📧 school15@edu.ru</span>
+        </div>
     </div>
 
     <nav>
-        <div class="logo">ШКОЛА<span>15</span></div>
-        <ul class="menu">
-            <li><a href="#news">Новости</a></li>
-            <li><a href="#schedule">Расписание</a></li>
-            <li><a href="#teachers">Учителя</a></li>
-            <li><a href="#about">О нас</a></li>
-        </ul>
+        <div class="container nav-container">
+            <div class="logo">ШКОЛА<span>15</span></div>
+            <ul class="menu">
+                <li><a href="#home">Главная</a></li>
+                <li><a href="#news">Новости</a></li>
+                <li><a href="#teachers">Учителя</a></li>
+                <li><a href="#schedule">Расписание</a></li>
+            </ul>
+        </div>
     </nav>
 
-    <header class="main-banner">
-        <div class="banner-text">
-            <h1>Твое будущее начинается здесь</h1>
-            <p>Классическое образование в современных условиях. Прием заявлений в 1 и 10 классы открыт.</p>
-            <a href="#about" class="btn-primary">Подробнее о школе</a>
+    <header id="home" class="hero">
+        <div class="container">
+            <div class="hero-content">
+                <h1>Образование высшего качества</h1>
+                <p>Мы создаем условия для развития талантов и успешного будущего каждого ученика.</p>
+                <a href="#news" class="btn">Узнать последние новости</a>
+            </div>
         </div>
     </header>
 
-    <section id="news" class="content-section">
-        <h2 class="section-title">Последние события</h2>
-        <div class="news-grid">
-            <article class="news-card">
-                <div class="news-date">28 Марта</div>
-                <h3>Победа в олимпиаде</h3>
-                <p>Наши ученики заняли призовые места на городском этапе по физике и английскому языку.</p>
-            </article>
-            <article class="news-card">
-                <div class="news-date">25 Марта</div>
-                <h3>День открытых дверей</h3>
-                <p>Приглашаем будущих первоклассников и их родителей на экскурсию по школе 15 апреля.</p>
-            </article>
-            <article class="news-card">
-                <div class="news-date">20 Марта</div>
-                <h3>Спортивные достижения</h3>
-                <p>Сборная школы по волейболу вышла в финал регионального турнира «Золотой мяч».</p>
-            </article>
-        </div>
-    </section>
-
-    <section id="schedule" class="info-block">
-        <div class="info-container">
-            <div class="text-side">
-                <h2>Учебный процесс</h2>
-                <p>Мы используем передовые методики обучения, уделяя внимание как точным наукам, так и творческому развитию личности.</p>
-                <ul class="features-list">
-                    <li>✅ Профильные IT-классы</li>
-                    <li>✅ Спортивные секции и кружки</li>
-                    <li>✅ Подготовка к ЕГЭ и ОГЭ</li>
-                </ul>
-            </div>
-            <div class="image-side">
-                <div class="image-placeholder">ФОТО ШКОЛЫ</div>
+    <section id="news" class="section">
+        <div class="container">
+            <h2 class="title">События школы</h2>
+            <div class="grid">
+                <article class="card">
+                    <div class="card-date">29 Марта 2026</div>
+                    <h3>Победа в олимпиаде</h3>
+                    <p>Наши ученики 8-х классов заняли призовые места на городском этапе по английскому языку.</p>
+                </article>
+                <article class="card">
+                    <div class="card-date">25 Марта 2026</div>
+                    <h3>Весенний бал</h3>
+                    <p>Традиционный творческий вечер прошел в актовом зале. Фотоотчет уже в галерее.</p>
+                </article>
+                <article class="card">
+                    <div class="card-date">20 Марта 2026</div>
+                    <h3>День IT-профессий</h3>
+                    <p>Приглашенные специалисты из ведущих компаний провели мастер-класс по Python для старшеклассников.</p>
+                </article>
             </div>
         </div>
     </section>
 
-    <footer>
-        <div class="footer-content">
-            <p>© 2026 МБОУ СОШ №15. Все права защищены.</p>
-            <div class="socials">VK • Telegram</div>
+    <section id="teachers" class="section bg-light">
+        <div class="container">
+            <h2 class="title">Наши педагоги</h2>
+            <div class="teachers-list">
+                <div class="teacher-card">
+                    <div class="t-img">👩‍🏫</div>
+                    <div class="t-info">
+                        <h3>Иванова Елена Николаевна</h3>
+                        <span class="badge">Математика</span>
+                        <p>Почетный работник образования, стаж 20 лет.</p>
+                    </div>
+                </div>
+                <div class="teacher-card">
+                    <div class="t-img">👨‍🏫</div>
+                    <div class="t-info">
+                        <h3>Петров Сергей Викторович</h3>
+                        <span class="badge">Информатика</span>
+                        <p>Ведущий эксперт по подготовке к ОГЭ и ЕГЭ.</p>
+                    </div>
+                </div>
+                <div class="teacher-card">
+                    <div class="t-img">👩‍🏫</div>
+                    <div class="t-info">
+                        <h3>Смирнова Анна Игоревна</h3>
+                        <span class="badge">Английский язык</span>
+                        <p>Магистр лингвистики, организатор языкового клуба.</p>
+                    </div>
+                </div>
+            </div>
         </div>
-    </footer>
+    </section>
 
-    <script src="script.js"></script>
-</body>
-</html>
+    <section id="schedule" class="section">
+        <div class="container">
+            <h2 class="title">Расписание звонков</h2>
+            <table class="schedule-table">
+                <thead>
+                    <tr>
+                        <th>Урок</th>
