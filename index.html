@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>МБОУ СОШ №37 | Официальный сайт</title>
+    <title>МБОУ СОШ №15 | Официальный сайт</title>
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
@@ -23,17 +23,36 @@
                 <li><a href="#home">Главная</a></li>
                 <li><a href="#news">Новости</a></li>
                 <li><a href="#teachers">Учителя</a></li>
-                <li><a href="#schedule">Расписание</a></li>
             </ul>
         </div>
     </nav>
 
     <header id="home" class="hero">
-        <div class="container">
-            <div class="hero-content">
+        <div class="container hero-container">
+            <div class="hero-text">
                 <h1>Образование высшего качества</h1>
                 <p>Мы создаем условия для развития талантов и успешного будущего каждого ученика.</p>
-                <a href="#news" class="btn">Узнать последние новости</a>
+                <a href="#news" class="btn">Последние новости</a>
+            </div>
+            
+            <div class="hero-schedule card">
+                <h3>🔔 Расписание звонков</h3>
+                <table class="bells-table">
+                    <thead>
+                        <tr>
+                            <th>Урок</th>
+                            <th>Время</th>
+                            <th>Перемена</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr><td>1</td><td>08:30 – 09:15</td><td>10 мин</td></tr>
+                        <tr><td>2</td><td>09:25 – 10:10</td><td>15 мин</td></tr>
+                        <tr><td>3</td><td>10:25 – 11:10</td><td>20 мин</td></tr>
+                        <tr><td>4</td><td>11:30 – 12:15</td><td>10 мин</td></tr>
+                        <tr><td>5</td><td>12:25 – 13:10</td><td>10 мин</td></tr>
+                    </tbody>
+                </table>
             </div>
         </div>
     </header>
@@ -42,20 +61,20 @@
         <div class="container">
             <h2 class="title">События школы</h2>
             <div class="grid">
-                <article class="card">
+                <article class="card news-card">
                     <div class="card-date">29 Марта 2026</div>
                     <h3>Победа в олимпиаде</h3>
                     <p>Наши ученики 8-х классов заняли призовые места на городском этапе по английскому языку.</p>
                 </article>
-                <article class="card">
+                <article class="card news-card">
                     <div class="card-date">25 Марта 2026</div>
                     <h3>Весенний бал</h3>
                     <p>Традиционный творческий вечер прошел в актовом зале. Фотоотчет уже в галерее.</p>
                 </article>
-                <article class="card">
+                <article class="card news-card">
                     <div class="card-date">20 Марта 2026</div>
                     <h3>День IT-профессий</h3>
-                    <p>Приглашенные специалисты из ведущих компаний провели мастер-класс по Python для старшеклассников.</p>
+                    <p>Приглашенные специалисты из компаний провели мастер-класс по Python.</p>
                 </article>
             </div>
         </div>
@@ -65,38 +84,47 @@
         <div class="container">
             <h2 class="title">Наши педагоги</h2>
             <div class="teachers-list">
-                <div class="teacher-card">
-                    <div class="t-img">👩‍🏫</div>
+                <div class="teacher-card card">
+                    <div class="t-img-container">
+                        <img src="https://images.unsplash.com/photo-1544161515-4ab6ce6db874?auto=format&fit=crop&w=150&q=80" alt="Иванова Е.Н.">
+                    </div>
                     <div class="t-info">
                         <h3>Иванова Елена Николаевна</h3>
                         <span class="badge">Математика</span>
                         <p>Почетный работник образования, стаж 20 лет.</p>
                     </div>
                 </div>
-                <div class="teacher-card">
-                    <div class="t-img">👨‍🏫</div>
+                <div class="teacher-card card">
+                    <div class="t-img-container">
+                        <img src="https://images.unsplash.com/photo-1573496359142-b8d87734a5a2?auto=format&fit=crop&w=150&q=80" alt="Петров С.В.">
+                    </div>
                     <div class="t-info">
                         <h3>Петров Сергей Викторович</h3>
                         <span class="badge">Информатика</span>
                         <p>Ведущий эксперт по подготовке к ОГЭ и ЕГЭ.</p>
                     </div>
                 </div>
-                <div class="teacher-card">
-                    <div class="t-img">👩‍🏫</div>
+                <div class="teacher-card card">
+                    <div class="t-img-container">
+                        <img src="https://images.unsplash.com/photo-1494790108377-be9c29b29330?auto=format&fit=crop&w=150&q=80" alt="Смирнова А.И.">
+                    </div>
                     <div class="t-info">
                         <h3>Смирнова Анна Игоревна</h3>
                         <span class="badge">Английский язык</span>
-                        <p>Магистр лингвистики, организатор языкового клуба.</p>
+                        <p>Магистр лингвистики, организатор клуба.</p>
                     </div>
                 </div>
             </div>
         </div>
     </section>
 
-    <section id="schedule" class="section">
+    <footer>
         <div class="container">
-            <h2 class="title">Расписание звонков</h2>
-            <table class="schedule-table">
-                <thead>
-                    <tr>
-                        <th>Урок</th>
+            <p>© 2026 Муниципальное бюджетное общеобразовательное учреждение школа №15</p>
+            <p class="footer-sub">Официальный сайт</p>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>
