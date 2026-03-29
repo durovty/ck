@@ -3,30 +3,78 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Мой Проект | Информатика</title>
+    <title>Средняя школа №15 | Официальный сайт</title>
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
-    <div class="background-blobs"></div>
-    
+
+    <div class="top-bar">
+        <span>📍 ул. Школьная, 10</span>
+        <span>📞 +7 (800) 555-35-35</span>
+    </div>
+
     <nav>
-        <div class="logo">PROJECT.<span>01</span></div>
-        <ul class="nav-links">
-            <li><a href="#home">Главная</a></li>
-            <li><a href="#about">О проекте</a></li>
-            <li><a href="#contact">Контакты</a></li>
+        <div class="logo">ШКОЛА<span>15</span></div>
+        <ul class="menu">
+            <li><a href="#news">Новости</a></li>
+            <li><a href="#schedule">Расписание</a></li>
+            <li><a href="#teachers">Учителя</a></li>
+            <li><a href="#about">О нас</a></li>
         </ul>
     </nav>
 
-    <main id="home">
-        <section class="hero">
-            <div class="glass-card">
-                <h1>Создание современного сайта</h1>
-                <p>Школьный проект по информатике, выполненный с использованием HTML5, CSS3 и JavaScript.</p>
-                <button id="action-btn">Узнать больше</button>
+    <header class="main-banner">
+        <div class="banner-text">
+            <h1>Твое будущее начинается здесь</h1>
+            <p>Классическое образование в современных условиях. Прием заявлений в 1 и 10 классы открыт.</p>
+            <a href="#about" class="btn-primary">Подробнее о школе</a>
+        </div>
+    </header>
+
+    <section id="news" class="content-section">
+        <h2 class="section-title">Последние события</h2>
+        <div class="news-grid">
+            <article class="news-card">
+                <div class="news-date">28 Марта</div>
+                <h3>Победа в олимпиаде</h3>
+                <p>Наши ученики заняли призовые места на городском этапе по физике и английскому языку.</p>
+            </article>
+            <article class="news-card">
+                <div class="news-date">25 Марта</div>
+                <h3>День открытых дверей</h3>
+                <p>Приглашаем будущих первоклассников и их родителей на экскурсию по школе 15 апреля.</p>
+            </article>
+            <article class="news-card">
+                <div class="news-date">20 Марта</div>
+                <h3>Спортивные достижения</h3>
+                <p>Сборная школы по волейболу вышла в финал регионального турнира «Золотой мяч».</p>
+            </article>
+        </div>
+    </section>
+
+    <section id="schedule" class="info-block">
+        <div class="info-container">
+            <div class="text-side">
+                <h2>Учебный процесс</h2>
+                <p>Мы используем передовые методики обучения, уделяя внимание как точным наукам, так и творческому развитию личности.</p>
+                <ul class="features-list">
+                    <li>✅ Профильные IT-классы</li>
+                    <li>✅ Спортивные секции и кружки</li>
+                    <li>✅ Подготовка к ЕГЭ и ОГЭ</li>
+                </ul>
             </div>
-        </section>
-    </main>
+            <div class="image-side">
+                <div class="image-placeholder">ФОТО ШКОЛЫ</div>
+            </div>
+        </div>
+    </section>
+
+    <footer>
+        <div class="footer-content">
+            <p>© 2026 МБОУ СОШ №15. Все права защищены.</p>
+            <div class="socials">VK • Telegram</div>
+        </div>
+    </footer>
 
     <script src="script.js"></script>
 </body>
