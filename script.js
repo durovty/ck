@@ -1,10 +1,18 @@
-window.addEventListener('scroll', function() {
-    const nav = document.querySelector('nav');
-    if (window.scrollY > 50) {
-        nav.style.padding = '10px 10%';
-        nav.style.background = 'rgba(255, 255, 255, 0.95)';
-    } else {
-        nav.style.padding = '20px 10%';
-        nav.style.background = 'white';
-    }
+// Простая анимация появления при скролле
+window.addEventListener('scroll', () => {
+    const sections = document.querySelectorAll('.section');
+    sections.forEach(section => {
+        const sectionTop = section.getBoundingClientRect().top;
+        if (sectionTop < window.innerHeight - 100) {
+            section.style.opacity = "1";
+            section.style.transform = "translateY(0)";
+        }
+    });
+});
+
+// Начальное состояние для анимации
+document.querySelectorAll('.section').forEach(section => {
+    section.style.opacity = "0";
+    section.style.transform = "translateY(20px)";
+    section.style.transition = "all 0.6s ease-out";
 });
